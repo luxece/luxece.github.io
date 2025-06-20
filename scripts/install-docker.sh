@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Cập nhật hệ thống
+sudo dpkg --configure -a
+sudo rm -f /etc/apt/keyrings/docker.gpg
+sudo rm -f /etc/apt/sources.list.d/docker.list
+
 sudo apt update && sudo apt upgrade -y
 
 # Cài gói hỗ trợ HTTPS cho apt
